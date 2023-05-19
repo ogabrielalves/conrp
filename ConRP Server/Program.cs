@@ -2,23 +2,14 @@
 using System.Net;
 using System.Net.Sockets;
 using System.Diagnostics;
-using System.ServiceProcess;
 
-
-public class Program : ServiceBase
+class Program
 {
-    private TcpListener listener;
-    private int port = 8888; // Porta para escutar as conexões
-
-    public Program()
+    static void Main(string[] args)
     {
-        this.ServiceName = "MyService";
-        this.CanStop = true;
-    }
+        int port = 8888; // Porta para escutar as conexões
 
-    protected override void OnStart(string[] args)
-    {
-        listener = new TcpListener(IPAddress.Any, port);
+        TcpListener listener = new TcpListener(IPAddress.Any, port);
         listener.Start();
         Console.WriteLine("Aguardando conexões...");
 
@@ -43,11 +34,6 @@ public class Program : ServiceBase
         }
     }
 
-    protected override void OnStop()
-    {
-        listener.Stop();
-    }
-
     static string RunNetstatCommand()
     {
         Process process = new Process();
@@ -60,10 +46,5 @@ public class Program : ServiceBase
 
         string output = process.StandardOutput.ReadToEnd();
         return output;
-    }
-
-    public static void Main(string[] args)
-    {
-        ServiceBase.Run(new Program());
     }
 }
