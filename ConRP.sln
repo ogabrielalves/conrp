@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33529.622
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConRP Client", "ConRP Client\ConRP Client.csproj", "{B8B122FA-93B4-4A68-9437-3D05E23FA7FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConRP Server", "ConRP Server\ConRP Server.csproj", "{AE63833B-32D6-4002-8589-FB6C3014B7C7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B8B122FA-93B4-4A68-9437-3D05E23FA7FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8B122FA-93B4-4A68-9437-3D05E23FA7FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8B122FA-93B4-4A68-9437-3D05E23FA7FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8B122FA-93B4-4A68-9437-3D05E23FA7FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE63833B-32D6-4002-8589-FB6C3014B7C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE63833B-32D6-4002-8589-FB6C3014B7C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE63833B-32D6-4002-8589-FB6C3014B7C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE63833B-32D6-4002-8589-FB6C3014B7C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FAE827EE-15D1-4B27-9F43-1F42997FFE85}
+	EndGlobalSection
+EndGlobal

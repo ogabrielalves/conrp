@@ -1,0 +1,7 @@
+C:\Users\gabriel.silva\source\repos\ConRP\ConRP Server\bin\Release\ConRP Server.exe.config
+C:\Users\gabriel.silva\source\repos\ConRP\ConRP Server\bin\Release\ConRP Server.exe
+C:\Users\gabriel.silva\source\repos\ConRP\ConRP Server\bin\Release\ConRP Server.pdb
+C:\Users\gabriel.silva\source\repos\ConRP\ConRP Server\obj\Release\ConRP Server.csproj.AssemblyReference.cache
+C:\Users\gabriel.silva\source\repos\ConRP\ConRP Server\obj\Release\ConRP Server.csproj.CoreCompileInputs.cache
+C:\Users\gabriel.silva\source\repos\ConRP\ConRP Server\obj\Release\ConRP Server.exe
+C:\Users\gabriel.silva\source\repos\ConRP\ConRP Server\obj\Release\ConRP Server.pdb

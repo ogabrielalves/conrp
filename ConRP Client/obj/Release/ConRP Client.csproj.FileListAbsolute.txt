@@ -1,0 +1,6 @@
+C:\Users\gabriel.silva\source\repos\ConRP\ConRP Client\bin\Release\ConRP Client.exe.config
+C:\Users\gabriel.silva\source\repos\ConRP\ConRP Client\bin\Release\ConRP Client.exe
+C:\Users\gabriel.silva\source\repos\ConRP\ConRP Client\bin\Release\ConRP Client.pdb
+C:\Users\gabriel.silva\source\repos\ConRP\ConRP Client\obj\Release\ConRP Client.csproj.CoreCompileInputs.cache
+C:\Users\gabriel.silva\source\repos\ConRP\ConRP Client\obj\Release\ConRP Client.exe
+C:\Users\gabriel.silva\source\repos\ConRP\ConRP Client\obj\Release\ConRP Client.pdb
