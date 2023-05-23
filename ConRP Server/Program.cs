@@ -9,19 +9,25 @@ class Program
     {
         int port = 8888; // Porta para escutar as conexões
 
+        DateTime horarioLogin = DateTime.Now; // Horario que o usuário realizou login
+        Console.Write("Digite seu nome: ");
+        string nome = Console.ReadLine();
+        Console.WriteLine($"\n[!] {nome}, você está logado com sucesso!");
+
         TcpListener listener = new TcpListener(IPAddress.Any, port);
         listener.Start();
-        Console.WriteLine("Aguardando conexões...");
+        Console.WriteLine("\n[!] Aguardando conexões...");
 
         while (true)
         {
             TcpClient client = listener.AcceptTcpClient();
-            Console.WriteLine("Cliente conectado. Verificando conexão RDP...");
+            Console.WriteLine("\n[!] Cliente conectado com sucesso!\n[!] Verificando se há uma conexão RDP...");
 
-            string output = RunNetstatCommand();
-            bool isConnected = output.Contains(":3389");
+            bool isConnected = CheckRdpConnection();
 
-            string response = isConnected ? "Existe uma conexão RDP ativa" : "Não existe uma conexão RDP ativa";
+            string response = isConnected ?
+                $"\n[!] Existe uma conexão RDP ativa com o usuário: {nome}\n[!] Conectado às: {horarioLogin:dd/MM/yyyy HH:mm:ss}"
+                : "\n[!] Não existe uma conexão RDP ativa";
 
             // Envia a resposta para o cliente
             byte[] buffer = System.Text.Encoding.UTF8.GetBytes(response);
@@ -29,9 +35,23 @@ class Program
             stream.Write(buffer, 0, buffer.Length);
             stream.Flush();
 
+            if (!isConnected)
+            {
+                Console.Clear();
+                Console.Write("Digite seu nome: ");
+                nome = Console.ReadLine();
+                Console.WriteLine($"\n[!] {nome}, você está logado com sucesso!");
+            }
+
             // Fecha a conexão com o cliente
             client.Close();
         }
+    }
+
+    static bool CheckRdpConnection()
+    {
+        string output = RunNetstatCommand();
+        return output.Contains(":3389");
     }
 
     static string RunNetstatCommand()

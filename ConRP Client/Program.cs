@@ -6,7 +6,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.Write("Digite o IP da máquina que deseja verificar a conexão RDP: ");
+        Console.Write("\n[!] Digite o IP da máquina que deseja verificar a conexão RDP: ");
         string ip = Console.ReadLine();
 
         int port = 8888; // Porta do servidor
@@ -26,13 +26,13 @@ class Program
                 response.Append(Encoding.UTF8.GetString(buffer, 0, bytesRead));
             } while (stream.DataAvailable);
 
-            Console.WriteLine("Resposta do servidor: " + response.ToString());
+            Console.WriteLine("\n[!] Resposta do servidor: " + response.ToString());
 
             client.Close();
         }
         catch (Exception ex)
         {
-            Console.WriteLine("Erro ao conectar ao servidor: " + ex.Message);
+            Console.WriteLine("\n[!] Erro ao conectar ao servidor: " + ex.Message);
         }
     }
 }
